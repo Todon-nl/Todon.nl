@@ -17,6 +17,8 @@
 #
 
 class Report < ApplicationRecord
+  include Paginable
+
   belongs_to :account
   belongs_to :target_account, class_name: 'Account'
   belongs_to :action_taken_by_account, class_name: 'Account', optional: true
